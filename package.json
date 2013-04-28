@@ -1,0 +1,13 @@
+{
+  "name": "webduino",
+  "description": "A Web FrontEnd for Arduino.",
+  "version": "0.0.1",
+  "author": "Cooper Maa <coopermaa77@gmail.com>",
+  "private": true,
+  "engines": { "node": ">= 0.6.0" },
+  "dependencies": {
+    "socketstream": "0.3.2",
+    "ss-stylus": "0.1.x",
+    "firmata":"0.2.4"
+  }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="utf-8"/>
+    <meta name='viewport' content='width=device-width initial-scale=1' />
+    <link href="/assets/main/1361721364868.css" media="screen" rel="stylesheet" type="text/css"><script src="/assets/main/1361721364868.js" type="text/javascript"></script>
+    <title>Firmata WebApp</title>
+</head>
+
+<body>
+
+<nav class="top-bar">
+  <ul>
+    <!-- Title Area -->
+    <li class="name">
+      <h1><a href="http://coopermaa2nd.blogspot.com" target="_blank">Firmata WebApp</a></h1>
+    </li>   
+  </ul>
+</nav>
+
+<p></p>
+  
+<div ng-controller='arduinoCtrl' ng-init='init()' style='text-align:center'>
+
+<div ng-repeat='pin in pins'>
+<div class="row">
+  <div class="two columns">
+    Pin {{pin.pinNO}}
+  </div>
+  <div class="four columns">
+    <select ng-model="object" ng-options="obj.value as obj.name for obj in pin.supportedModes"></select>
+  </div>
+  <div class="six columns">
+    <a class="small radius button" href="#" ng-click='digitalToggle(pin)'>{{states[pin.value]}}</a>
+  </div>
+</div>
+</div>
+
+<div class="digits">{{A0}}</div>        
+</div> <!-- end of ng-controller -->
+
+</body>
+</html>

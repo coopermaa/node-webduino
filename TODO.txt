@@ -1,0 +1,9 @@
+# TODO:
+
+* Rewrite client code with ss-angular, jade and CoffeeScript
+* List available serial ports, let user select serial port?
+* emit pinmode-change, digitalWrite and analogWrite events?
+
+# Issues:
+ * Not working with SocketStream 0.3.3, why? (Note: 0.3.3 replaced socket.io with engine.io)
+ 

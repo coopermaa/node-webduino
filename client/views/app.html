@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='myApp'>
+<head>
+  <meta charset="utf-8"/>
+  <meta name='viewport' content='width=device-width' />
+  <SocketStream/>
+  <title>Webduino</title>
+</head>
+
+<body>
+<nav class="top-bar">
+  <ul>
+    <!-- Title Area -->
+    <li class="name">
+      <h1><a href="#">Webduino</a></h1>
+    </li>   
+  </ul>
+</nav>
+
+<p></p>
+  
+<div ng-controller='arduinoCtrl' ng-init='init()'>
+<div ng-repeat='pin in pins|limitTo:-availablePins'>
+<div class="row" style='margin:3px'>
+  <div class="four mobile-one columns" style="text-align:right">Pin {{pin.pinNO}}</div> 
+  <div class="three mobile-one columns">
+    <select ng-model="pin.mode" ng-options="m.value as m.name for m in pin.supportedModes"
+            ng-change='pinMode(pin)'>
+    </select>
+  </div>
+  <div class="five mobile-two columns">
+    <div ng-switch on="pin.mode">       
+      <a ng-switch-default class="small radius button" href="#" 
+         ng-click='digitalToggle(pin)'>{{STATES[pin.value]}}</a>
+      <span ng-switch-when='0' class="digits">{{pin.value}}</span>
+      <span ng-switch-when='2' class="digits">{{pin.value}}</span>
+      <div ng-switch-when='3' slider max=255 ng-model='pin.value' ng-change='analogWrite(pin)' 
+           style='width:250px;margin:5px'></div>  
+      <div ng-switch-when='4' slider max=180 ng-model='pin.value' ng-change='servoWrite(pin)' 
+           style='width:250px;margin:5px'></div>             
+      <!-- input ng-switch-when='3' type='text' ng-model='pin.value' 
+             ng-change='analogWrite(pin)' style='width:50px;text-align:center' -->
+    </div>
+  </div>
+</div>
+</div>
+</div> <!-- end of ng-controller -->
+
+<div class="row" style='margin:15px;text-align:center'>
+Written by <a href="http://coopermaa2nd.blogspot.com" target="_blank">Cooper Maa</a>
+</div>
+</body>
+</html>
