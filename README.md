@@ -1,4 +1,4 @@
-# Webduino
+# node-webduino
 
 A web FrontEnd for Arduino. Real-time I/O monitoring and controlling in your browser.
 
@@ -9,8 +9,8 @@ A web FrontEnd for Arduino. Real-time I/O monitoring and controlling in your bro
 See <http://nodejs.org> on how to setup Node, NPM and CoffeeScript, then clone 
 this repository and prepare it for use with:
 
-    $ git clone https://github.com/coopermaa/webduino
-    $ cd webduino
+    $ git clone https://github.com/coopermaa/node-webduino
+    $ cd node-webduino
     $ npm install
 
 ## Usage
@@ -28,7 +28,7 @@ file `app.coffee`, then start the server using either of these:
 
 Then point your browser at <http://localhost:3000/>.    
 
-Here is a screencut of Webduino for Arduino UNO:
+Here is a screencut of node-webduino for Arduino UNO:
 
 ![screencut](http://bit.ly/XHta3m)
     
