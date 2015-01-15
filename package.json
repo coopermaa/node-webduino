@@ -5,6 +5,7 @@
   "author": "Cooper Maa <coopermaa77@gmail.com>",
   "private": true,
   "engines": { "node": ">= 0.6.0" },
+  "scripts": { "start": "coffee app.coffee" },
   "dependencies": {
     "socketstream": "0.3.2",
     "ss-stylus": "0.1.x",
