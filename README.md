@@ -32,6 +32,19 @@ Here is a screencut of node-webduino for Arduino UNO:
 
 ![screencut](http://bit.ly/XHta3m)
     
+## Dockertized node-webduino
+
+Suppose your Arduino is on /dev/ttyS1, then save the alias setting below to ~/.profile 
+or ~/.bashrc:
+
+    $ alias node-webduino="sudo docker run -d --privileged \
+       -v /dev/ttyS1:/dev/ttyACM0 \
+       -p 3000:3000 coopermaa/node-webduino"
+
+Then run following to start node-webduino:
+
+    $ node-webdunio
+
 ## License
 
 [The MIT License](http://opensource.org/licenses/MIT)
