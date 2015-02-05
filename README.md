@@ -32,7 +32,7 @@ Here is a screencut of node-webduino for Arduino UNO:
 
 ![screencut](http://bit.ly/XHta3m)
     
-## Dockertized node-webduino
+## Dockerized node-webduino
 
 Suppose your Arduino is on /dev/ttyS1, then save the alias setting below to ~/.profile 
 or ~/.bashrc:
