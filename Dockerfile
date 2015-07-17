@@ -1,4 +1,4 @@
-FROM dockerfile/nodejs-runtime
+FROM node:0.12-onbuild
 MAINTAINER Cooper Maa
 
 RUN npm install -g coffee-script
@@ -11,3 +11,4 @@ RUN cd node_modules/socketstream && \
     npm install socket.io@0.9.15 --save
 
 EXPOSE 3000
+
