@@ -13,6 +13,15 @@ this repository and prepare it for use with:
     $ cd node-webduino
     $ npm install
 
+Upgrade socket.io of the socketstream dependency package. There is a bug "can't set
+headers after they are sent" in socket.io < 0.9.15, so we have to upgrade
+ socket.io. 
+
+    cd node_modules/socketstream
+    npm install socket.io@0.9.15 --save
+
+Note the lastest socket.io seems not compatible with socketstream.
+
 ## Usage
 
 Upload Standard Firmata to your Arduino. Better to change samplingInterval from 
@@ -51,3 +60,4 @@ Then run following to start node-webduino:
 
 Credits: Developers of node.js, Arduino, SocketStream, AngularJS, firmata and 
 people who involved in improving Web technologies.
+
